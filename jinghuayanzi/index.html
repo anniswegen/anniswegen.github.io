@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="警花燕子官方网站，提供警务工作风采展示、法律法规普及、安全防范知识以及便民服务指南，打造警民互动的权威平台。">
+    <meta name="keywords" content="警花燕子,警务风采,安全防范,法律法规,警民互动,便民服务">
+    <title>警花燕子-警务风采展示与警民互动服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0056b3;
+            --accent-color: #d32f2f;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f6f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #ffcc00;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-tag {
+            background-color: #e3f2fd;
+            color: var(--secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--white);
+            padding: 50px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: var(--secondary-color);
+            background-color: #f8fbff;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .service-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Spotlight Section */
+        .spotlight-section {
+            margin-bottom: 60px;
+        }
+
+        .spotlight-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .spotlight-img {
+            flex: 1;
+            min-width: 300px;
+            background: url('https://picsum.photos/seed/police/800/600') center/cover no-repeat;
+            min-height: 400px;
+        }
+
+        .spotlight-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .spotlight-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .spotlight-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--white);
+            padding: 50px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #002244;
+            color: #ccc;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .spotlight-img {
+                min-height: 250px;
+            }
+
+            .spotlight-text {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>👮</span> 警花燕子
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">警务风采</a></li>
+                    <li><a href="#">安全防范</a></li>
+                    <li><a href="#">法律法规</a></li>
+                    <li><a href="#">便民服务</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>守护平安，警民同行</h1>
+            <p>警花燕子致力于传播法治精神，普及安全知识，搭建警民沟通的桥梁，共建和谐社区。</p>
+            <div>
+                <a href="#services" class="btn btn-primary">服务指南</a>
+                <a href="#faq" class="btn btn-outline">常见问题</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Latest News -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">最新动态</h2>
+                <a href="#" class="view-all">查看更多 &rarr;</a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/police1/400/250" alt="社区巡逻" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">警务动态</span>
+                        <h3 class="news-title">警花燕子深入社区开展反诈宣传，守护群众“钱袋子”</h3>
+                        <p class="news-meta">2023-10-24 | 社区警务</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/police2/400/250" alt="交通指挥" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">交通管理</span>
+                        <h3 class="news-title">开展“护学岗”行动，燕子警官护航学生上下学安全</h3>
+                        <p class="news-meta">2023-10-22 | 交通管理</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="https://picsum.photos/seed/police3/400/250" alt="安全讲座" class="news-img">
+                    <div class="news-content">
+                        <span class="news-tag">安全教育</span>
+                        <h3 class="news-title">防范电信网络诈骗知识讲座走进企业，提升员工安全意识</h3>
+                        <p class="news-meta">2023-10-20 | 企业防范</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2 class="section-title">便民服务</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-name">业务咨询</h3>
+                    <p class="service-desc">提供户籍、出入境、交通等日常警务业务的在线咨询与指引。</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🔒</div>
+                    <h3 class="service-name">安全防范</h3>
+                    <p class="service-desc">发布最新治安动态，普及防盗、防骗、防火等安全常识。</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">⚖️</div>
+                    <h3 class="service-name">法律咨询</h3>
+                    <p class="service-desc">解读最新法律法规，提供法律条文查询与专业解读。</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <h3 class="service-name">警民互动</h3>
+                    <p class="service-desc">畅通民意渠道，收集群众意见建议，共建共治共享。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlight -->
+        <section class="spotlight-section">
+            <div class="spotlight-container">
+                <div class="spotlight-img"></div>
+                <div class="spotlight-text">
+                    <h2>警营风采：燕子警官的一天</h2>
+                    <p>作为一名女警，燕子警官在维护社会治安、打击违法犯罪的同时，更注重在社区服务中展现女性的细腻与耐心。从清晨的巡逻到深夜的值班，她用行动诠释了“人民公安为人民”的誓言。在这里，您可以看到她参与的各种警务活动，了解她如何帮助群众解决困难，以及她对于法治建设的独到见解。</p>
+                    <a href="#" class="btn btn-primary">阅读更多故事</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2 class="section-title">常见问题解答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">如何进行网上报备？</div>
+                    <div class="faq-answer">
+                        <p>您可以访问我们的便民服务平台，点击“网上报备”入口，按照提示填写相关信息，提交后工作人员会在24小时内进行审核。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">遇到紧急情况如何报警？</div>
+                    <div class="faq-answer">
+                        <p>请直接拨打110报警电话，保持冷静，清晰说明地点、事件性质及现场情况。警花燕子提醒您，切勿随意谎报警情。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获取最新的交通管制信息？</div>
+                    <div class="faq-answer">
+                        <p>您可以关注我们的官方微信公众号或查看本站“交通管理”板块，我们会及时发布最新的交通管制、限行及路况信息。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>关于警花燕子</h3>
+                <p>警花燕子是一个致力于服务公众、普及法律知识的虚拟警务服务平台。我们通过新媒体形式，让警务工作更加透明、亲民。</p>
+            </div>
+            <div class="footer-col">
+                <h3>快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="#">户籍业务指南</a></li>
+                    <li><a href="#">出入境政策查询</a></li>
+                    <li><a href="#">交通违法查询</a></li>
+                    <li><a href="#">警民恳谈会</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系方式</h3>
+                <ul class="footer-links">
+                    <li>电话：12345678</li>
+                    <li>邮箱：service@jinghuayanzi.com</li>
+                    <li>地址：XX市公安局便民服务大厅</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 警花燕子服务平台 版权所有
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Mobile Menu Toggle (Basic)
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        menuBtn.addEventListener('click', () => {
+            const ul = nav.querySelector('ul');
+            if (ul.style.display === 'flex') {
+                ul.style.display = 'none';
+            } else {
+                ul.style.display = 'flex';
+                ul.style.flexDirection = 'column';
+                ul.style.position = 'absolute';
+                ul.style.top = '70px';
+                ul.style.left = '0';
+                ul.style.width = '100%';
+                ul.style.backgroundColor = '#003366';
+                ul.style.padding = '20px';
+            }
+        });
+    </script>
+</body>
+</html>
