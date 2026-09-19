@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="东周国历史资料库，涵盖春秋战国时期诸侯国历史、地理变迁、著名人物及东周王朝兴衰脉络，提供详尽的历史档案与学术研究参考。">
+    <meta name="keywords" content="东周国,春秋战国,周朝历史,东周王朝,周天子,战国七雄">
+    <title>东周国-春秋战国历史档案与诸侯国兴衰研究</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #F9F7F2;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0D8C8;
+            --accent-gold: #D4AF37;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 0 0.5rem;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.6)), url('https://picsum.photos/seed/dongzhou_history/1600/600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-gold);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #bfa030;
+            transform: translateY(-2px);
+        }
+
+        /* Layout Grid */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .section-header {
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-header h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* Timeline Grid */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .timeline-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.15);
+        }
+
+        .card-img {
+            height: 160px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .timeline-card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-year {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 0.5rem;
+        }
+
+        .stat-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .stat-list li:last-child {
+            border-bottom: none;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .category-list a:hover {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .category-count {
+            background-color: #eee;
+            padding: 0 0.4rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Featured Content */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .featured-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .featured-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .featured-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1.5rem var(--spacing-unit);
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>东</span>周国史
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#history">历史分期</a></li>
+                    <li><a href="#lords">诸侯争霸</a></li>
+                    <li><a href="#culture">文化思想</a></li>
+                    <li><a href="#archive">历史档案</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>东周国：礼崩乐坏与诸侯争霸的时代</h1>
+            <p>探索从公元前770年到公元前256年的历史长河，见证周天子权威衰落、诸侯国崛起及百家争鸣的辉煌篇章。</p>
+            <a href="#history" class="btn">开始阅读</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <main class="main-content">
+            <!-- Historical Periods -->
+            <section id="history">
+                <div class="section-header">
+                    <h2>历史分期</h2>
+                </div>
+                <p style="margin-bottom: 1.5rem; color: var(--text-light);">东周分为两个主要时期：春秋时期与战国时期，两者在政治格局与文化思想上有着本质的区别。</p>
+                <div class="timeline-grid">
+                    <article class="timeline-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/feudal/400/250" alt="春秋时期示意图">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-year">公元前770年 - 公元前476年</span>
+                            <h3 class="card-title">春秋时期</h3>
+                            <p class="card-desc">周王室东迁洛邑，诸侯国势力的初步膨胀。以“尊王攘夷”为口号，诸侯争霸，礼仪规范逐渐松动。</p>
+                        </div>
+                    </article>
+                    <article class="timeline-card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/warring/400/250" alt="战国时期示意图">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-year">公元前475年 - 公元前221年</span>
+                            <h3 class="card-title">战国时期</h3>
+                            <p class="card-desc">大国兼并小国，形成战国七雄。战争规模扩大，变法运动兴起，最终由秦统一六国。</p>
+                        </div>
+                    </article>
+                    <article class="timeline-card">
+                        <div class="card-img">
+                            <img src="="https://picsum.photos/seed/confucius/400/250" alt="百家争鸣">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-year">公元前5世纪</span>
+                            <h3 class="card-title">百家争鸣</h3>
+                            <p class="card-desc">社会大变革催生了思想解放，儒家、道家、法家、墨家等诸子百家涌现，奠定中国传统文化根基。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Major States -->
+            <section id="lords">
+                <div class="section-header">
+                    <h2>主要诸侯国</h2>
+                </div>
+                <div class="featured-grid">
+                    <div class="featured-item">
+                        <div class="featured-icon">👑</div>
+                        <div class="featured-text">
+                            <h3>周王室</h3>
+                            <p>名义上的共主，政治影响力逐渐衰退，成为诸侯国的礼仪象征。</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <div class="featured-icon">⚔️</div>
+                        <div class="featured-text">
+                            <h3>齐楚燕韩赵魏秦</h3>
+                            <p>战国七雄占据中原主要版图，通过变法图强，成为左右历史走向的核心力量。</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <div class="featured-icon">🛡️</div>
+                        <div class="featured-text">
+                            <h3>晋楚争霸</h3>
+                            <p>春秋时期最具代表性的地缘政治冲突，持续百余年，奠定南方与北方格局。</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <div class="featured-icon">📜</div>
+                        <div class="featured-text">
+                            <h3>变法图强</h3>
+                            <p>商鞅变法、李悝变法等推动社会制度变革，从分封制向郡县制过渡。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Culture & Thoughts -->
+            <section id="culture">
+                <div class="section-header">
+                    <h2>文化与思想演变</h2>
+                </div>
+                <div class="timeline-grid">
+                    <article class="timeline-card">
+                        <div class="card-body">
+                            <span class="card-year">儒家</span>
+                            <h3 class="card-title">仁义礼智信</h3>
+                            <p class="card-desc">以孔子、孟子为代表，主张恢复周礼，强调社会伦理与道德教化。</p>
+                        </div>
+                    </article>
+                    <article class="timeline-card">
+                        <div class="card-body">
+                            <span class="card-year">道家</span>
+                            <h3 class="card-title">无为而治</h3>
+                            <p class="card-desc">以老子、庄子为代表，主张顺应自然，反对人为的繁苛礼法与制度。</p>
+                        </div>
+                    </article>
+                    <article class="timeline-card">
+                        <div class="card-body">
+                            <span class="card-year">法家</span>
+                            <h3 class="card-title">以法治国</h3>
+                            <p class="card-desc">以韩非子为代表，主张君主集权，通过严刑峻法统一思想与行动。</p>
+                        </div>
+                    </article>
+                    <article class="timeline-card">
+                        <div class="card-body">
+                            <span class="card-year">墨家</span>
+                            <h3 class="card-title">兼爱非攻</h3>
+                            <p class="card-desc">以墨子为代表，代表下层平民利益，主张互助互爱与反对战争。</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar-box">
+                <h3 class="sidebar-title">东周概览</h3>
+                <ul class="stat-list">
+                    <li>
+                        <span>起始年份</span>
+                        <span class="stat-value">前770年</span>
+                    </li>
+                    <li>
+                        <span>结束年份</span>
+                        <span class="stat-value">前256年</span>
+                    </li>
+                    <li>
+                        <span>延续时长</span>
+                        <span class="stat-value">514年</span>
+                    </li>
+                    <li>
+                        <span>主要阶段</span>
+                        <span class="stat-value">春秋、战国</span>
+                    </li>
+                    <li>
+                        <span>最终结局</span>
+                        <span class="stat-value">秦灭东周</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3 class="sidebar-title">热门分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">春秋五霸 <span class="category-count">12</span></a></li>
+                    <li><a href="#">战国七雄 <span class="category-count">8</span></a></li>
+                    <li><a href="#">诸子百家 <span class="category-count">24</span></a></li>
+                    <li><a href="#">青铜器皿 <span class="category-count">15</span></a></li>
+                    <li><a href="#">兵马俑 <span class="category-count">5</span></a></li>
+                    <li><a href="#">百家争鸣 <span class="category-count">20</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3 class="sidebar-title">推荐阅读</h3>
+                <ul class="category-list">
+                    <li><a href="#">东周列国志</a></li>
+                    <li><a href="#">史记·周本纪</a></li>
+                    <li><a href="#">春秋公羊传</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>东周国史</h4>
+                <p style="font-size: 0.9rem; color: #999;">致力于整理与传播中国春秋战国时期的历史资料，为历史爱好者提供权威、详尽的学术参考。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">历史分期</a></li>
+                    <li><a href="#">诸侯争霸</a></li>
+                    <li><a href="#">文化思想</a></li>
+                    <li><a href="#">历史档案</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关链接</h4>
+                <ul>
+                    <li><a href="#">百度百科</a></li>
+                    <li><a href="#">中华文明网</a></li>
+                    <li><a href="#">历史地图集</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 东周国史研究网. All Rights Reserved. 本站内容仅供学习参考，非官方历史机构发布。</p>
+        </div>
+    </footer>
+
+</body>
+              </html>
