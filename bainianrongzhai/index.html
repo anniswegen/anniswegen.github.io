@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="百年荣宅对外开放最新参观信息、预约方式、开放时间及参观须知。作为上海历史建筑地标，荣宅是上海当代艺术博物馆旗下的重要文化空间，提供深度历史导览与沉浸式艺术展览。">
+    <meta name="keywords" content="百年荣宅对外开放,荣宅,上海荣宅,荣宗敬故居,上海当代艺术博物馆,历史建筑参观">
+    <title>百年荣宅对外开放-上海历史建筑参观指南与预约通道</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-color: #F9F7F2;
+            --white: #FFFFFF;
+            --accent-gold: #C5A059;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: var(--text-light);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #6d360f;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/resshing/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .info-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* History Section */
+        .history {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .history-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .history-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .history-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .history-features li::before {
+            content: "✓";
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .history-image {
+            position: relative;
+        }
+
+        .history-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 20px 20px 0 var(--secondary-color);
+        }
+
+        /* Visit Guide */
+        .guide {
+            padding: 5rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .guide-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .guide-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e0e0e0;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 1rem;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            box-shadow: 0 0 0 4px var(--bg-color);
+        }
+
+        .step-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .step-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Ticket & Info Table */
+        .ticket-info {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+
+            .history-image {
+                order: -1;
+            }
+
+            .guide-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .guide-steps::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                荣宅
+                <span>SHANGHAI RESIDENCE</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#history">历史背景</a></li>
+                    <li><a href="#visit">参观指南</a></li>
+                    <li><a href="#info">开放信息</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#book" class="cta-btn">立即预约</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>百年荣宅对外开放</h1>
+                <p>探索上海历史建筑的瑰宝，感受百年前荣氏家族的传奇与荣宅现当代艺术的融合。</p>
+                <div class="hero-buttons">
+                    <a href="#visit" class="cta-btn">查看参观指南</a>
+                    <a href="#book" class="btn-outline">在线预约门票</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Cards -->
+        <section class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📅</div>
+                    <h3>开放时间</h3>
+                    <p>周二至周日 10:00 - 18:00（17:00 停止入场）</p>
+                    <p style="margin-top: 5px; font-size: 0.85rem;">周一闭馆（法定节假日除外）</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>参观地点</h3>
+                    <p>静安区陕西南路186号</p>
+                    <p style="margin-top: 5px; font-size: 0.85rem;">上海市中心历史风貌区</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🎫</div>
+                    <h3>票务信息</h3>
+                    <p>实行实名制分时段预约</p>
+                    <p style="margin-top: 5px; font-size: 0.85rem;">建议提前 3-7 天预约</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="history">
+            <div class="container history-content">
+                <div class="history-text">
+                    <h2>历史建筑修复与活化</h2>
+                    <p>荣宅是上海著名的近代优秀历史建筑，为荣宗敬先生的私宅。这座宏伟的花园住宅建于1918年，融合了中西方建筑风格，是上海石库门与西洋建筑结合的典范。</p>
+                    <p>历经数年的修缮与活化工作，这座百年宅邸现已对外开放。修复工程在最大程度保留建筑原貌和历史痕迹的基础上，引入了现代展陈与功能，使其成为连接过去与未来的文化空间。</p>
+                    <ul class="history-features">
+                        <li>荣获“亚洲建筑金奖”修缮项目</li>
+                        <li>联合国教科文组织亚太地区文化遗产保护优秀奖</li>
+                        <li>完整保留的历史原真性</li>
+                    </ul>
+                </div>
+                <div class="history-image">
+                    <img src="https://picsum.photos/seed/resshing2/600/400.jpg" alt="荣宅内部景观">
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Guide -->
+        <section id="visit" class="guide">
+            <div class="container">
+                <h2 class="section-title">参观流程指南</h2>
+                <p class="section-subtitle">为了让您更好地体验荣宅，请按以下步骤进行参观</p>
+                
+                <div class="guide-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>在线预约</h3>
+                        <p>通过官方渠道或合作平台实名预约参观时段，选择合适的日期和人数。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>按时抵达</h3>
+                        <p>请务必在预约时间段内抵达，迟到将可能无法入场。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>检票入馆</h3>
+                        <p>携带身份证件，在入口处进行核验并领取导览设备（如有）。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3>文明参观</h3>
+                        <p>遵守馆内规定，请勿触摸展品，保持安静，共同维护历史建筑环境。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Table -->
+        <section id="info" class="ticket-info">
+            <div class="container">
+                <h2 class="section-title">开放信息一览</h2>
+                <p class="section-subtitle">详细的票价、时长及注意事项</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>详情说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>成人票</td>
+                                <td>80元/人</td>
+                            </tr>
+                            <tr>
+                                <td>学生票/老人票</td>
+                                <td>50元/人（需出示有效证件）</td>
+                            </tr>
+                            <tr>
+                                <td>参观时长</td>
+                                <td>约 1.5 - 2 小时</td>
+                            </tr>
+                            <tr>
+                                <td>语音导览</td>
+                                <td>提供多语言电子导览服务</td>
+                            </tr>
+                            <tr>
+                                <td>停车服务</td>
+                                <td>周边设有收费停车场，建议绿色出行</td>
+                            </tr>
+                            <tr>
+                                <td>特殊人群</td>
+                                <td>残疾人士、军人凭有效证件可免费参观（需提前咨询预约）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">参观常见问题</h2>
+                <p class="section-subtitle">关于百年荣宅对外开放的疑问解答</p>
+
+                <div class="faq-item">
+                    <div class="faq-question">是否可以拍照？</div>
+                    <div class="faq-answer">
+                        <p>荣宅内大部分区域允许拍照，但禁止使用闪光灯和三脚架。部分临时展览区域可能会根据策展方要求禁止摄影，请留意现场指示牌。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如果预约了不去，会影响再次预约吗？</div>
+                    <div class="faq-answer">
+                        <p>无故取消预约可能会影响您未来的预约资格，建议您在确定行程后再进行预约。如需取消，请在预约截止时间前在系统中操作。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">荣宅内可以用餐吗？</div>
+                    <div class="faq-answer">
+                        <p>荣宅作为历史建筑，主要功能为展览与参观。目前馆内不提供餐饮服务，建议您在参观前后于周边区域用餐。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">儿童可以进入参观吗？</div>
+                    <div class="faq-answer">
+                        <p>荣宅内有台阶和楼梯，且部分展品具有脆弱性，为了保护文物及安全考虑，不建议儿童单独进入。如有特殊需求，请联系客服咨询。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于荣宅</h4>
+                    <p>荣宅是上海近代优秀历史建筑，经由专业修缮后作为文化空间对外开放，致力于历史保护与艺术推广。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#history">历史背景</a></li>
+                        <li><a href="#visit">参观指南</a></li>
+                        <li><a href="#info">开放信息</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：021-12345678</li>
+                        <li>邮箱：visit@resshing-museum.com</li>
+                        <li>地址：上海市静安区陕西南路186号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 百年荣宅对外开放项目组 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
