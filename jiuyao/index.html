@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="九妖-探索东方奇幻世界，九妖图鉴、神话传说与修仙攻略。提供九妖文化深度解读、角色图鉴及修仙秘籍，带你领略传统神话与现代幻想的完美融合。">
+    <meta name="keywords" content="九妖,东方奇幻,神话传说,修仙,妖怪图鉴,奇幻小说,九妖图鉴">
+    <title>九妖-东方奇幻神话与修仙世界探索指南</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --gold-color: #f39c12;
+            --bg-dark: #1a1a1d;
+            --bg-card: #2c2c30;
+            --text-light: #ecf0f1;
+            --text-gray: #bdc3c7;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold-color);
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 29, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/jiuyao_hero/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        main {
+            padding: 4rem 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--gold-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Featured Section (Wide) */
+        .featured-section {
+            margin: 4rem 0;
+        }
+
+        .featured-card {
+            display: flex;
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .featured-img {
+            width: 50%;
+            object-fit: cover;
+            min-height: 400px;
+        }
+
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Mythology / Legend Section */
+        .myth-list {
+            list-style: none;
+        }
+
+        .myth-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .myth-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .myth-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .myth-info p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Guide Section */
+        .guide-container {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #2a2a2e 100%);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #444;
+        }
+
+        .guide-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgba(211, 84, 0, 0.2);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold-color);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--gold-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid #333;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-gray);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-card);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid #444;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .featured-card {
+                flex-direction: column;
+            }
+
+            .featured-img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .featured-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span>九</span>妖
+                </a>
+                <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#mythology">神话传说</a></li>
+                    <li><a href="#bestiary">九妖图鉴</a></li>
+                    <li><a href="#cultivation">修仙指南</a></li>
+                    <li><a href="#community">同好社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探寻九妖秘境</h1>
+            <p>融合东方古典神话与现代奇幻想象，为您呈现一个妖灵纵横、仙魔共存的宏大世界。深入了解九妖文化，开启您的修仙之旅。</p>
+            <a href="#bestiary" class="btn">查看九妖图鉴</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Featured Article -->
+        <section class="featured-section">
+            <div class="featured-card">
+                <img src="https://picsum.photos/seed/jiuyao_legend/800/600.jpg" alt="九妖起源" class="featured-img">
+                <div class="featured-content">
+                    <span class="card-tag">深度解读</span>
+                    <h2 class="card-title">九妖起源：混沌初开的第一缕灵气</h2>
+                    <p class="card-desc">相传在天地未分之时，混沌中孕育出九股独特的灵气。它们经过亿万年的演化，最终化形为九种性格迥异、力量强大的妖灵。本文将带您追溯这股古老力量的源头，解析它们如何成为世界秩序中不可或缺的一部分。</p>
+                    <a href="#" style="color: var(--gold-color); font-weight: bold; margin-top: auto;">阅读全文 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mythology / Categories -->
+        <section id="mythology">
+            <h2 class="section-title">神话分类</h2>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">瑞兽</span>
+                        <h3 class="card-title">祥瑞之兆</h3>
+                        <p class="card-desc">象征吉祥、富贵与长寿的妖灵，多居于云端或深山福地，拥有庇护一方水土的神力。</p>
+                        <div class="card-footer">
+                            <span>12种神兽</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">凶兽</span>
+                        <h3 class="card-title">毁灭之力</h3>
+                        <p class="card-desc">掌管灾厄与混沌的妖灵，力量狂暴，通常被视为天地异象的征兆，需以正道镇压。</p>
+                        <div class="card-footer">
+                            <span>8种凶兽</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">灵兽</span>
+                        <h3 class="card-title">伴生伙伴</h3>
+                        <p class="card-desc">性情温和，可与人沟通，是修仙者最为珍贵的灵宠，能助人渡劫飞升。</p>
+                        <div class="card-footer">
+                            <span>15种灵宠</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bestiary / List -->
+        <section id="bestiary" style="margin-top: 4rem;">
+            <h2 class="section-title">九妖图鉴精选</h2>
+            <div class="grid-layout">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jiuyao1/400/300.jpg" alt="赤焰魔狐" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">火系</span>
+                        <h3 class="card-title">赤焰魔狐</h3>
+                        <p class="card-desc">生性狡黠，周身缠绕九条火焰尾巴，能幻化人形，擅长操控烈火与幻术。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jiuyao2/400/300.jpg" alt="寒潭玄龟" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">水系</span>
+                        <h3 class="card-title">寒潭玄龟</h3>
+                        <p class="card-desc">万年修行的神兽，背生重甲，力大无穷，能吐水成冰，防御力极高。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jiuyao3/400/300.jpg" alt="雷音鹤" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">雷系</span>
+                        <h3 class="card-title">雷音鹤</h3>
+                        <p class="card-desc">翱翔于九天之上，鸣声如雷，每振翅一次便伴随一道天雷，净化世间污秽。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jiuyao4/400/300.jpg" alt="幽冥鬼蝶" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">暗系</span>
+                        <h3 class="card-title">幽冥鬼蝶</h3>
+                        <p class="card-desc">身形娇小却致命，翅膀扇动间能散播致幻毒粉，常出没于荒野坟茔。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Cultivation Guide -->
+        <section id="cultivation" style="margin-top: 4rem;">
+            <h2 class="section-title">修仙入门指南</h2>
+            <div class="guide-container">
+                <p>想要在九妖横行的世界中生存并提升修为，了解修仙的基本步骤至关重要。以下是从凡人踏入仙途的简要流程：</p>
+                <div class="guide-steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">淬体炼气</h3>
+                        <p>通过吸纳天地灵气，洗涤凡胎肉体，为修炼打下坚实基础。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">御兽契约</h3>
+                        <p>寻找契合自身的妖灵伙伴，签订契约，使其成为战斗中的得力助手。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">渡劫飞升</h3>
+                        <p>经历天雷淬炼，突破境界瓶颈，最终得道成仙。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="margin-top: 4rem;">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-item">
+                <div class="faq-question">什么是“九妖”？</div>
+                <div class="faq-answer">“九妖”并非指单一的生物，而是一个统称，代表了九种源自混沌初开的最强灵气所化形的妖灵种族体系。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">普通人如何避免与妖灵发生冲突？</div>
+                <div class="faq-answer">建议在陌生区域保持警惕，不要随意触碰未知的祭坛或古树。若遇到凶兽，应立即寻找掩体并释放避妖符。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">修仙者需要遵循什么法则？</div>
+                <div class="faq-answer">修仙者需遵守“天地秩序”，不得随意屠戮无辜生灵，更不可妄图逆天改命，否则必将遭到天谴。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <span>九</span>妖
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem;">
+                        致力于推广东方奇幻文化，构建一个属于所有幻想爱好者的精神家园。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">九妖起源</a></li>
+                        <li><a href="#">种族图鉴</a></li>
+                        <li><a href="#">法宝秘籍</a></li>
+                        <li><a href="#">宗门分布</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区</h4>
+                    <ul>
+                        <li><a href="#">修仙论坛</a></li>
+                        <li><a href="#">同人创作</a></li>
+                        <li><a href="#">线下聚会</a></li>
+                        <li><a href="#">投稿通道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">商务合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 九妖文化探索网. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                                              </html>
