@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酸酸甜甜就是我舞蹈视频 - 经典怀旧舞蹈教学与教学视频合集</title>
+    <meta name="description" content="本站提供《酸酸甜甜就是我》经典舞蹈视频教学、分解动作演示及完整舞台版回顾。包含详细的动作解析、适合初学者的教学指南以及相关的怀旧舞蹈资讯，助您重温经典，掌握舞蹈技巧。">
+    <meta name="keywords" content="酸酸甜甜就是我舞蹈视频, 王心凌舞蹈教学, 经典怀旧舞蹈, 街舞教学, 毕业舞">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --accent-color: #2ed573;
+            --text-dark: #2f3542;
+            --text-gray: #57606f;
+            --bg-light: #f1f2f6;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 129, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffeaa7 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .video-wrapper {
+            background: var(--white);
+            padding: 10px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            background: #ffeaa7;
+            color: #d35400;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Tutorial List */
+        .tutorial-item {
+            display: flex;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            align-items: center;
+            gap: 20px;
+        }
+
+        .tutorial-thumb {
+            width: 120px;
+            height: 90px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .tutorial-info {
+            flex: 1;
+        }
+
+        .tutorial-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .tutorial-info .meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0%; /* JS will animate this */
+            transition: width 1s ease-out;
+        }
+
+        /* Features */
+        .features {
+            background: var(--white);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #a4b0be;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #a4b0be;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .tutorial-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tutorial-thumb {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>✿</span> 经典舞蹈馆
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#teaching">教学视频</a></li>
+                    <li><a href="#full">完整舞台</a></li>
+                    <li><a href="#guide">练习指南</a></li>
+                </ul>
+            </nav>
+            <a href="#teaching" class="cta-btn">开始学习</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>重温《酸酸甜甜就是我》舞蹈视频</h1>
+                <p>不仅是王心凌的经典代表作，更是无数人心中的毕业舞首选。本站提供高清舞蹈教学视频、动作分解及舞台回顾，助您轻松掌握这支充满活力的怀旧舞曲。</p>
+                
+                <div class="video-wrapper">
+                    <!-- Using a placeholder video structure to represent the main video -->
+                    <iframe src="https://www.youtube.com/embed/placeholder_video_id" title="酸酸甜甜就是我 - 经典舞蹈回顾" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Guide Section -->
+        <section class="container" id="guide">
+            <div class="section-title">
+                <h2>舞蹈教学指南</h2>
+                <p>从零开始，掌握每一个动作细节</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/dance1/400/250" alt="舞蹈基础动作" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">入门级</span>
+                        <h3>基础律动与步伐</h3>
+                        <p>本视频详细讲解了舞蹈中的基础步伐，包括侧滑步、转身及定点动作，适合初学者建立节奏感。</p>
+                        <a href="#" class="card-link">查看详情 &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/dance2/400/250" alt="手势与表情" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">进阶技巧</span>
+                        <h3>手势与表情管理</h3>
+                        <p>如何做出标志性的“可爱手势”？如何保持舞蹈时的甜美表情？专家为你一一拆解。</p>
+                        <a href="#" class="card-link">查看详情 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video List Section -->
+        <section class="container" id="teaching">
+            <div class="section-title">
+                <h2>精选教学视频</h2>
+                <p>系统化的课程安排，助你快速上手</p>
+            </div>
+
+            <div class="tutorial-list">
+                <article class="tutorial-item">
+                    <img src="https://picsum.photos/seed/step1/200/150" alt="第一部分教学" class="tutorial-thumb">
+                    <div class="tutorial-info">
+                        <h4>第一部分：主歌部分动作解析</h4>
+                        <div class="meta">时长：08:30 | 难度：★☆☆☆☆</div>
+                        <p>针对歌曲前半段的主歌部分，进行慢速分解教学，确保每一个动作都准确到位。</p>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%" data-width="100%"></div></div>
+                    </div>
+                    <a href="#" class="cta-btn">观看</a>
+                </article>
+
+                <article class="tutorial-item">
+                    <img src="https://picsum.photos/seed/step2/200/150" alt="第二部分教学" class="tutorial-thumb">
+                    <div class="tutorial-info">
+                        <h4>第二部分：副歌高能舞段</h4>
+                        <div class="meta">时长：12:15 | 难度：★★★☆☆</div>
+                        <p>副歌部分的舞蹈动作最为密集，包含跳跃和快速转身，本视频提供标准示范与纠错。</p>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%" data-width="100%"></div></div>
+                    </div>
+                    <a href="#" class="cta-btn">观看</a>
+                </article>
+
+                <article class="tutorial-item">
+                    <img src="https://picsum.photos/seed/step3/200/150" alt="第三部分教学" class="tutorial-thumb">
+                    <div class="tutorial-info">
+                        <h4>第三部分：完整动作连招</h4>
+                        <div class="meta">时长：15:00 | 难度：★★★☆☆</div>
+                        <p>将前两部分内容连贯起来，配合音乐进行完整练习，提升整体流畅度。</p>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%" data-width="100%"></div></div>
+                    </div>
+                    <a href="#" class="cta-btn">观看</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Full Stage Section -->
+        <section class="container" id="full">
+            <div class="section-title">
+                <h2>完整舞台版回顾</h2>
+                <p>感受原版魅力，寻找差距与灵感</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/stage1/400/300" alt="经典演唱会舞台" class="card-img">
+                    <div class="card-body">
+                        <h3>2003年演唱会版</h3>
+                        <p>原汁原味的复古舞台，感受当年的青春气息。</p>
+                        <a href="#" class="card-link">播放视频 &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/stage2/400/300" alt="怀旧翻拍" class="card-img">
+                    <div class="card-body">
+                        <h3>校园毕业舞会翻拍</h3>
+                        <p>许多学校毕业晚会都会跳这支舞，重温感动。</p>
+                        <a href="#" class="card-link">播放视频 &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/stage3/400/300" alt="街舞改编" class="card-img">
+                    <div class="card-body">
+                        <h3>街舞版改编展示</h3>
+                        <p>加入现代街舞元素，让经典老歌焕发新生。</p>
+                        <a href="#" class="card-link">播放视频 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">高清画质</div>
+                        <h4>4K/HD 分辨率</h4>
+                        <p>所有教学视频均提供高清画质，细节清晰可见。</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">暂停回放</div>
+                        <h4>自由掌控节奏</h4>
+                        <p>支持任意倍速播放与暂停，方便反复练习难点。</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">同步字幕</div>
+                        <h4>中文教学字幕</h4>
+                        <p>关键动作配有中文注释，零基础也能轻松学。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>关于本站</h5>
+                    <p style="color: #a4b0be; font-size: 0.9rem;">
+                        本站致力于提供高质量的《酸酸甜甜就是我》舞蹈视频资源，包括教学、分解及舞台回顾。帮助舞者重温经典，提升舞蹈技巧。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速导航</h5>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#teaching">教学视频</a></li>
+                        <li><a href="#full">完整舞台</a></li>
+                        <li><a href="#">练习建议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>相关资源</h5>
+                    <ul>
+                        <li><a href="#">经典MV合集</a></li>
+                        <li><a href="#">舞蹈伴奏下载</a></li>
+                        <li><a href="#">舞蹈装备推荐</a></li>
+                        <li><a href="#">常见问题解答</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 经典舞蹈馆. All Rights Reserved. 本站资源仅供学习交流使用.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interaction to animate progress bars on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            setTimeout(() => {
+                progressBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width;
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
