@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粤语学习网-地道发音、口语训练与常用词汇速查平台</title>
+    <meta name="description" content="粤语学习网提供专业的粤语发音教程、口语对话练习、常用词汇表及语法解析。从入门到精通，助你掌握地道粤语，轻松开口交流。">
+    <meta name="keywords" content="粤语学习,粤语发音,粤语口语,粤语词汇,粤语语法,粤语入门,广东话学习">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f1faee;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .nav-cta:hover {
+            background-color: #d62839;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #457b9d 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-body);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Course/Levels Section */
+        .levels {
+            padding: 80px 0;
+            background-color: var(--bg-card);
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .level-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .level-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .level-img {
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .level-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .level-card:hover .level-img img {
+            transform: scale(1.05);
+        }
+
+        .level-content {
+            padding: 25px;
+        }
+
+        .level-tag {
+            background-color: #e9c46a;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .level-content h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .level-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .level-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Vocabulary Section */
+        .vocab {
+            padding: 80px 0;
+            background-color: var(--bg-body);
+        }
+
+        .vocab-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .vocab-tab {
+            padding: 8px 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .vocab-tab.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .vocab-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .vocab-char {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .vocab-pinyin {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .vocab-cantonese {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--bg-card);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-question.active::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-cta {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>粤语</span>学习网
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">学习特色</a></li>
+                    <li><a href="#levels">分级课程</a></li>
+                    <li><a href="#vocab">常用词汇</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#levels" class="nav-cta">开始学习</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>从零开始，掌握地道粤语</h1>
+                <p>无论您是想去广东旅游、在香港工作，还是单纯对粤语文化感兴趣，这里都有最适合您的发音教程和口语训练资源。</p>
+                <div class="hero-btns">
+                    <a href="#levels" class="btn btn-primary">查看课程</a>
+                    <a href="#vocab" class="btn btn-outline">常用词汇表</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择我们</h2>
+                <p class="section-subtitle">科学的学习方法，助您快速建立粤语语感</p>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🔊</div>
+                        <h3>标准发音示范</h3>
+                        <p>由资深粤语母语者录制，严格区分九声六调，纠正您的发音误区，确保开口即地道。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>系统语法解析</h3>
+                        <p>深入浅出地讲解粤语独特的语法结构，对比普通话差异，让您理解语言背后的逻辑。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🗣️</div>
+                        <h3>场景化口语训练</h3>
+                        <p>涵盖购物、问路、饮食、职场等高频生活场景，提供实用对话模板和地道俚语。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Levels Section -->
+        <section id="levels" class="levels">
+            <div class="container">
+                <h2 class="section-title">分级学习路径</h2>
+                <p class="section-subtitle">循序渐进，从入门到流利对话</p>
+                <div class="level-grid">
+                    <article class="level-card">
+                        <div class="level-img">
+                            <img src="https://picsum.photos/seed/cantonese1/400/250" alt="粤语入门基础">
+                        </div>
+                        <div class="level-content">
+                            <span class="level-tag">入门级</span>
+                            <h3>粤语零基础入门</h3>
+                            <div class="level-meta">
+                                <span>共 12 课时</span>
+                                <span>适合完全小白</span>
+                            </div>
+                            <p style="margin-bottom: 15px; color: #666; font-size: 0.9rem;">学习粤语拼音、声母韵母基础发音规则，掌握“你好、谢谢、对不起”等最基础问候语。</p>
+                            <a href="#" class="level-link">开始学习 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="level-card">
+                        <div class="level-img">
+                            <img src="https://picsum.photos/seed/cantonese2/400/250" alt="粤语进阶口语">
+                        </div>
+                        <div class="level-content">
+                            <span class="level-tag">进阶级</span>
+                            <h3>日常口语进阶</h3>
+                            <div class="level-meta">
+                                <span>共 24 课时</span>
+                                <span>适合有基础者</span>
+                            </div>
+                            <p style="margin-bottom: 15px; color: #666; font-size: 0.9rem;">掌握粤语独特的语气助词，学习数字、时间表达，能进行简单的自我介绍和购物对话。</p>
+                            <a href="#" class="level-link">开始学习 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="level-card">
+                        <div class="level-img">
+                            <img src="https://picsum.photos/seed/cantonese3/400/250" alt="粤语商务交流">
+                        </div>
+                        <div class="level-content">
+                            <span class="level-tag">高级</span>
+                            <h3>职场与商务粤语</h3>
+                            <div class="level-meta">
+                                <span>共 18 课时</span>
+                                <span>适合工作需求</span>
+                            </div>
+                            <p style="margin-bottom: 15px; color: #666; font-size: 0.9rem;">学习会议用语、商务邮件写作、电话沟通技巧，提升在香港及广东地区的职场竞争力。</p>
+                            <a href="#" class="level-link">开始学习 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vocabulary Section -->
+        <section id="vocab" class="vocab">
+            <div class="container">
+                <h2 class="section-title">高频常用词汇</h2>
+                <p class="section-subtitle">分类整理，随时随地查阅</p>
+                
+                <div class="vocab-tabs">
+                    <button class="vocab-tab active" onclick="switchTab('food')">美食饮品</button>
+                    <button class="vocab-tab" onclick="switchTab('daily')">日常生活</button>
+                    <button class="vocab-tab" onclick="switchTab('shopping')">购物出行</button>
+                    <button class="vocab-tab" onclick="switchTab('feeling')">情绪表达</button>
+                </div>
+
+                <div id="food" class="vocab-grid">
+                    <div class="vocab-item">
+                        <div class="vocab-char">茶</div>
+                        <div class="vocab-pinyin">caa4</div>
+                        <div class="vocab-cantonese">caa4</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">饭</div>
+                        <div class="vocab-pinyin">faan6</div>
+                        <div class="vocab-cantonese">faan6</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">面</div>
+                        <div class="vocab-pinyin">min6</div>
+                        <div class="vocab-cantonese">min6</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">水</div>
+                        <div class="vocab-pinyin">seoi2</div>
+                        <div class="vocab-cantonese">seoi2</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">饿</div>
+                        <div class="vocab-pinyin">nga6</div>
+                        <div class="vocab-cantonese">nga6</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">饮</div>
+                        <div class="vocab-pinyin">jam2</div>
+                        <div class="vocab-cantonese">jam2</div>
+                    </div>
+                </div>
+
+                <div id="daily" class="vocab-grid" style="display: none;">
+                    <div class="vocab-item">
+                        <div class="vocab-char">日</div>
+                        <div class="vocab-pinyin">jat6</div>
+                        <div class="vocab-cantonese">yat6</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">夜</div>
+                        <div class="vocab-pinyin">je5</div>
+                        <div class="vocab-cantonese">je5</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">早</div>
+                        <div class="vocab-pinyin">zou2</div>
+                        <div class="vocab-cantonese">zou2</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">钟</div>
+                        <div class="vocab-pinyin">zung1</div>
+                        <div class="vocab-cantonese">zung1</div>
+                    </div>
+                </div>
+
+                <div id="shopping" class="vocab-grid" style="display: none;">
+                    <div class="vocab-item">
+                        <div class="vocab-char">贵</div>
+                        <div class="vocab-pinyin">gwai3</div>
+                        <div class="vocab-cantonese">gwai3</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">平</div>
+                        <div class="vocab-pinyin">ping4</div>
+                        <div class="vocab-cantonese">ping4</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">贵</div>
+                        <div class="vocab-pinyin">mak6</div>
+                        <div class="vocab-cantonese">mak6</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">找</div>
+                        <div class="vocab-pinyin">cau2</div>
+                        <div class="vocab-cantonese">cau2</div>
+                    </div>
+                </div>
+
+                <div id="feeling" class="vocab-grid" style="display: none;">
+                    <div class="vocab-item">
+                        <div class="vocab-char">开心</div>
+                        <div class="vocab-pinyin">hoi1 sam1</div>
+                        <div class="vocab-cantonese">hoi1 sam1</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">烦</div>
+                        <div class="vocab-pinyin">faan4</div>
+                        <div class="vocab-cantonese">faan4</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">好</div>
+                        <div class="vocab-pinyin">hou2</div>
+                        <div class="vocab-cantonese">hou2</div>
+                    </div>
+                    <div class="vocab-item">
+                        <div class="vocab-char">唔好</div>
+                        <div class="vocab-pinyin">m4 hou2</div>
+                        <div class="vocab-cantonese">m4 hou2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">粤语和普通话有什么区别？</button>
+                        <div class="faq-answer">
+                            <p>粤语和普通话属于不同的语系，虽然有很多共同的词汇，但在发音、声调、语法结构上都有很大差异。例如，粤语有九个声调，比普通话的四个声调多，且保留了入声字，这会让初学者感到困难。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">没有基础可以学粤语吗？</button>
+                        <div class="faq-answer">
+                            <p>当然可以。我们的“零基础入门”课程专门为从未接触过粤语的学习者设计，从最基础的拼音和声母韵母开始教起，配合大量的模仿练习，帮助您逐步建立语感。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">学粤语需要多久才能开口交流？</button>
+                        <div class="faq-answer">
+                            <p>这取决于您的学习频率和投入程度。如果您每天坚持学习1小时，通常在3-6个月内可以掌握基本的日常问候和简单交流。达到流利程度则需要更长时间的持续练习。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">粤语拼音是什么？怎么读？</button>
+                        <div class="faq-answer">
+                            <p>粤语拼音（耶鲁拼音或粤拼）是用来标注粤语发音的注音系统。我们网站提供的词汇卡片上同时标注了拼音和对应的粤语汉字，您可以参考发音指南进行模仿。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>粤语学习网</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">致力于提供最专业、最实用的粤语学习资源，连接每一位热爱粤语文化的学习者。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>学习资源</h4>
+                    <ul>
+                        <li><a href="#">发音教程</a></li>
+                        <li><a href="#">语法解析</a></li>
+                        <li><a href="#">词汇大全</a></li>
+                        <li><a href="#">每日一句</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>学习路径</h4>
+                    <ul>
+                        <li><a href="#">入门课程</a></li>
+                        <li><a href="#">进阶口语</a></li>
+                        <li><a href="#">商务粤语</a></li>
+                        <li><a href="#">考试辅导</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">合作推广</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 粤语学习网 版权所有 | 仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all other answers
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Toggle current answer
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        // Vocabulary Tab Logic
+        function switchTab(tabId) {
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.vocab-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Hide all vocab grids
+            const grids = document.querySelectorAll('.vocab-grid');
+            grids.forEach(grid => grid.style.display = 'none');
+            
+            // Activate clicked tab
+            event.target.classList.add('active');
+            
+            // Show target grid
+            document.getElementById(tabId).style.display = 'grid';
+        }
+    </script>
+</body>
+                                         </html>
