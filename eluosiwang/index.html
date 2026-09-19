@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯网站-全球门户导航与深度资源指南</title>
+    <meta name="description" content="本站为您提供权威的俄罗斯网站导航、热门俄罗斯新闻门户、俄罗斯主流电商平台及生活服务入口。包含俄罗斯文化、旅游、留学及科技资讯，帮助您快速了解并访问俄罗斯优质网络资源。">
+    <meta name="keywords" content="俄罗斯网站,俄罗斯新闻,俄罗斯电商,俄罗斯旅游,俄罗斯留学,俄罗斯门户网站">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #f1f3f5;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+        }
+
+        .search-bar button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 2rem auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 2rem;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .category-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .category-list .count {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Section Header */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .more-link {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            background-color: #e9ecef;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .card-btn {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        
+        .card-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* List Style for Articles */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .article-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .article-item:hover {
+            border-color: var(--accent-color);
+        }
+
+        .article-thumb {
+            width: 200px;
+            height: 120px;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .article-info {
+            flex: 1;
+        }
+
+        .article-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .article-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem 1rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                display: none; /* Simplify for mobile demo */
+            }
+
+            .article-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .article-thumb {
+                width: 100%;
+                height: 180px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <span>🇷🇺</span> 俄罗斯网站
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">综合门户</a></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li><a href="#">电商购物</a></li>
+                <li><a href="#">留学移民</a></li>
+                <li><a href="#">旅游攻略</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索俄罗斯网站...">
+            <button>🔍</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>连接俄罗斯：权威导航与深度资源平台</h1>
+        <p>为您提供最全的俄罗斯主流网站入口，涵盖新闻、生活服务、电商及教育资讯，助您快速获取所需信息。</p>
+        <div class="hero-tags">
+            <span class="tag">新闻媒体</span>
+            <span class="tag">生活服务</span>
+            <span class="tag">教育留学</span>
+            <span class="tag">电商购物</span>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">热门分类</h3>
+            <ul class="category-list">
+                <li><a href="#">综合门户网站 <span class="count">12</span></a></li>
+                <li><a href="#">俄罗斯新闻媒体 <span class="count">28</span></a></li>
+                <li><a href="#">俄罗斯电商购物 <span class="count">15</span></a></li>
+                <li><a href="#">俄罗斯旅游出行 <span class="count">8</span></a></li>
+                <li><a href="#">俄罗斯教育留学 <span class="count">20</span></a></li>
+                <li><a href="#">俄罗斯金融支付 <span class="count">5</span></a></li>
+                <li><a href="#">俄罗斯娱乐社区 <span class="count">10</span></a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">常用工具</h3>
+            <ul class="category-list">
+                <li><a href="#">Yandex Translate</a></li>
+                <li><a href="#">Yandex Maps</a></li>
+                <li><a href="#">RuTracker</a></li>
+                <li><a href="#">Avito</a></li>
+                <li><a href="#">Ozon</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Featured Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">热门俄罗斯网站推荐</h2>
+                <a href="#" class="more-link">查看全部 &rarr;</a>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/russia1/400/250" alt="Yandex" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Yandex：俄罗斯科技巨头</h3>
+                        <p class="card-desc">Yandex是俄罗斯最大的互联网公司，提供搜索引擎、地图、翻译、电商及云服务，是访问俄罗斯网络的基础工具。</p>
+                        <a href="#" class="card-btn">访问网站</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/russia2/400/250" alt="Mail.ru" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Mail.ru Group：俄罗斯社交网络</h3>
+                        <p class="card-desc">Mail.ru不仅是俄罗斯最大的电子邮件服务，还拥有VKontakte（VK）等顶级社交平台，是了解俄罗斯社交动态的窗口。</p>
+                        <a href="#" class="card-btn">访问网站</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/russia3/400/250" alt="Avito" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Avito：俄罗斯版58同城</h3>
+                        <p class="card-desc">Avito是俄罗斯最大的分类信息网站，涵盖二手车、房产、二手商品及服务交易，适合寻找当地资源。</p>
+                        <a href="#" class="card-btn">访问网站</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">俄罗斯新闻资讯</h2>
+                <a href="#" class="more-link">更多资讯 &rarr;</a>
+            </div>
+            <div class="article-list">
+                <article class="article-item">
+                    <img src="https://picsum.photos/seed/news1/300/200" alt="News" class="article-thumb">
+                    <div class="article-info">
+                        <h3>俄罗斯主流媒体对国际局势的最新报道</h3>
+                        <p>深入分析俄罗斯国内各大新闻门户如RT、TASS以及独立媒体在当前国际环境下的报道重点与立场差异。</p>
+                        <div class="article-meta">
+                            <span>📅 2023-10-24</span> • <span>📍 莫斯科</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="article-item">
+                    <img src="https://picsum.photos/seed/news2/300/200" alt="News" class="article-thumb">
+                    <div class="article-info">
+                        <h3>圣彼得堡与莫斯科：俄罗斯双首都的数字化生活</h3>
+                        <p>探索俄罗斯两个最大城市的数字基础设施建设，包括移动支付普及率及公共Wi-Fi覆盖情况。</p>
+                        <div class="article-meta">
+                            <span>📅 2023-10-22</span> • <span>📍 圣彼得堡</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- E-commerce Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">俄罗斯电商与购物</h2>
+                <a href="#" class="more-link">浏览商城 &rarr;</a>
+            </div>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Ozon</h3>
+                        <p class="card-desc">俄罗斯最大的综合电商平台。</p>
+                        <a href="#" class="card-btn">进入</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Wildberries</h3>
+                        <p class="card-desc">俄罗斯最大的服装与日用品平台。</p>
+                        <a href="#" class="card-btn">进入</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">AliExpress RU</h3>
+                        <p class="card-desc">俄罗斯本地化运营的全球速卖通。</p>
+                        <a href="#" class="card-btn">进入</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Citilink</h3>
+                        <p class="card-desc">俄罗斯领先的电子产品零售商。</p>
+                        <a href="#" class="card-btn">进入</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">访问指南与帮助</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">如何注册俄罗斯本地账号</h3>
+                        <p class="card-desc">详细步骤介绍如何使用Yandex Passport注册俄罗斯邮箱、地图及支付服务。</p>
+                        <a href="#" class="card-btn">阅读指南</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">俄罗斯支付方式解析</h3>
+                        <p class="card-desc">了解Mir卡、QIWI钱包及电子货币在俄罗斯网站上的使用场景。</p>
+                        <a href="#" class="card-btn">阅读指南</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">俄罗斯网络安全提示</h3>
+                        <p class="card-desc">访问俄罗斯网站时需要注意的防火墙限制及隐私保护建议。</p>
+                        <a href="#" class="card-btn">阅读指南</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <ul>
+                <li><a href="#">网站介绍</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">免责声明</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>热门分类</h4>
+            <ul>
+                <li><a href="#">新闻门户</a></li>
+                <li><a href="#">社交网络</a></li>
+                <li><a href="#">本地生活</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>实用工具</h4>
+            <ul>
+                <li><a href="#">Yandex Translate</a></li>
+                <li><a href="#">Google Translate</a></li>
+                <li><a href="#">汇率换算</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关注我们</h4>
+            <ul>
+                <li><a href="#">微信公众号</a></li>
+                <li><a href="#">Twitter / X</a></li>
+                <li><a href="#">Telegram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 俄罗斯网站导航平台. All Rights Reserved. 本站仅供信息整理与导航使用。</p>
+    </div>
+</footer>
+
+</body>
+  </html>
